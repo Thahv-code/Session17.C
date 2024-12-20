@@ -13,13 +13,13 @@ int main(int argc, const char * argv[]) {
     int length;
     do {
         printf("\tMENU\n");
-        printf("1. Nhập vào chuỗi\n");
-        printf("2. In ra chuỗi\n");
-        printf("3. Đếm số lượng chữ cái trong chuỗi và in ra\n");
-        printf("4. Đếm số lượng chữ số trong chuỗi và in ra\n");
-        printf("5. Đếm số lượng kí tự đặc biệt trong chuỗi và in ra\n");
-        printf("6. Thoát\n");
-        printf("Hãy nhập lựa chọn của bạn :");
+        printf("1. Nhap phan tu vao chuaio\n");
+        printf("2. In ra chuoi\n");
+        printf("3. Dem so luong chu cai trong chuoi\n");
+        printf("4. Dem so luong so co trong chuoi trong chuoi\n");
+        printf("5. Dem so luong ky tu dac biet trong chuoi\n");
+        printf("6. Thoat\n");
+        printf("Hay nhap lua chon cua ban:");
         scanf("%d",&choice);
         fflush(stdin);
         switch (choice) {
@@ -46,7 +46,7 @@ int main(int argc, const char * argv[]) {
     return 0;
 }
 void inputArray(char *a){
-    printf("Hãy nhập một chuỗi bất kì : ");
+    printf("Moi ban nhap choi bat ki : ");
     fgets(a, 100, stdin);
 }
 char printArray(char *a){
@@ -56,14 +56,12 @@ char printArray(char *a){
 void letter(char *a,int *length){
     int count=0;
     *length = (int)strlen(a);
-//    a[*length-1]='\0';
-//    *length = (int)strlen(a);
     for(int i=0;i<*length;i++){
         if(isalpha(*(a+i))){
             count++;
         }
     }
-    printf("Số ký tự trong chuỗi là : %d\n",count);
+    printf("So ky tu trong chuoi la : %d\n",count);
 }void number(char *a,int *length){
     int count=0;
     *length = (int)strlen(a);
@@ -74,7 +72,7 @@ void letter(char *a,int *length){
             count++;
         }
     }
-    printf("Số chữ số trong chuỗi là : %d\n",count);
+    printf("So chu so trong chuoi la : %d\n",count);
 }
 void special(char *a,int *length){
     int count=0;
@@ -86,5 +84,5 @@ void special(char *a,int *length){
             count++;
         }
     }
-    printf("Số kí tự đặc biệt trong chuỗi là : %d\n",count);
+    printf("So ky tu dac biet trong chuoi la : %d\n",count);
 }
