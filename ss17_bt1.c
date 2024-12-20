@@ -9,12 +9,12 @@ int main(int argc, const char * argv[]) {
     int choice;
     do {
         printf("\tMENU\n");
-        printf("1. Nhập vào số phần tử và từng phần tử\n");
-        printf("2. Hiển thị các phần tử trong mảng\n");
-        printf("3. Tính độ dài mảng\n");
-        printf("4. Tính tổng các phần tử trong mảng\n");
-        printf("5. Hiện thị phần tử lớn nhất\n");
-        printf("6. Thoát\n");
+        printf("1. Nhap vao so phan tu va tung phan tu\n");
+        printf("2. Hien thi cac phan tu trong mang\n");
+        printf("3. Tinh do dai mang\n");
+        printf("4. Tinh tong cac phan tu trong mang\n");
+        printf("5. Hien thi phan tu lon nhat\n");
+        printf("6. Thoat\n");
         printf("Hãy nhập lựa chọn của bạn : ");
         scanf("%d",&choice);
         switch (choice) {
@@ -25,31 +25,31 @@ int main(int argc, const char * argv[]) {
                 printArray(a,&m);
                 break;
             case 3:
-                printf("Độ dài của mảng là : %d",m);
+                printf("Do dai cua mang la: %d",m);
                 break;
             case 4:
-                printf("Tổng các phần tử trong mảng là : %d\n", sumItem(a, &m));
+                printf("Tong cac phan tu la : %d\n", sumItem(a, &m));
                 break;
             case 5:
-                printf("Phần tử lớn nhất trong mảng là : %d\n", maxItem(a,&m));
+                printf("Phan tu lon nhat trong mang la: %d\n", maxItem(a,&m));
                 break;
             default:
-                printf("Lựa chọn không hợp lệ...........\n");
+                printf("Lua chon khong hop le..\n");
                 break;
         }
     } while (choice!=6);
     return 0;
 }
 void inputArray(int *a,int *m){
-    printf("Hãy nhập số phần tử cho mảng : ");
+    printf("Moi ban nhap so phan tu : ");
     scanf("%d",&*m);
     for(int i = 0;i<*m;i++){
-        printf("Nhập phần tử arr[%d] = ",i);
+        printf("Nhap phan tu arr[%d] = ",i);
         scanf("%d",&*(a+i));
     }
 }
 void printArray(int *a,int *m){
-    printf("Mảng của bạn là :\n");
+    printf("Mang cua ban la :\n");
     for(int i=0;i<*m;i++){
         printf("%d\t",*(a+i));
     }
